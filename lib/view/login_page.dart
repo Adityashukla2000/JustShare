@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
 TextEditingController email = TextEditingController();
 String emailText = "Please Enter your email";
 
-  // Controller Email
+  // Controller Password
 TextEditingController password = TextEditingController();
 String passText = "Please Enter your password";
 
@@ -40,8 +40,7 @@ String passText = "Please Enter your password";
               
               UiHelper.customButton(() { 
                 
-              }, "Login Button"),
-
+              }, "Login"),
           ],
          ),
   
