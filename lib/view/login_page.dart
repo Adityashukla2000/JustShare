@@ -1,5 +1,7 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:justshare/ui_components/uihelper.dart';
+import 'package:justshare/view/clickpic.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -41,6 +43,12 @@ String passText = "Please Enter your password";
               UiHelper.customButton(() { 
                 
               }, "Login"),
+
+
+ UiHelper.customButton(() async {
+            await availableCameras().then((value) => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => ClickImg(cameras: value))));
+          }, "Click"),
           ],
          ),
   
